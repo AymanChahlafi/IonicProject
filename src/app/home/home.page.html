@@ -1,0 +1,63 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="loadVilles()">
+        <ion-icon slot="start" name="refresh-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div class="ion-padding">
+    <ion-segment scrollable>
+      <ion-segment-button *ngFor="let pays of pays"  (click)="paySelectionner(pays.nom)">
+        <ion-label>{{pays.nom}}</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+  </div>
+
+  <ion-slides [options]="options">
+    
+    <ion-slide *ngFor="let ville of villes" (click)="villeDetail(ville.name)">
+      
+      <ion-grid (click)="villeselectionner(ville.id)" (click)="villeDetail(ville.name)">
+        <ion-row>
+          <ion-col size="12" class="poster-col">
+            <img class="poster" [src]="ville.image[0]" alt="" (click)="villeDetail(ville.name)">
+          </ion-col>
+          <ion-col size="12">
+            <h5 class="ion-no-margin">{{ville.libelle}}</h5>
+            <p class="ion-no-margin rate">
+              {{ville.pays}}
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+    </ion-slide>
+    
+  </ion-slides>
+
+  <ion-segment  scrollable value="1">
+    <ion-segment-button class="menu" value="1" (click)="menu(0)">
+      <ion-label>{{tab[0]}}</ion-label>
+    </ion-segment-button>
+    <ion-segment-button (click)="menu(1)">
+      <ion-label>{{tab[1]}}</ion-label>
+    </ion-segment-button>
+    <ion-segment-button (click)="menu(2)">
+      <ion-label>{{tab[2]}}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-content>

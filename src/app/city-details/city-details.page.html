@@ -1,0 +1,39 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons  slot="end">
+      <ion-button *ngIf="user.admin == true" (click)="updatedCity()">
+        <ion-icon class="edit" name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons *ngIf="user.admin == true" slot="end">
+      <ion-button  (click)="deleteCity()">
+        <ion-icon class="delete" name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-avatar slot="start" routerLink="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+<ion-app>
+  <ion-content>
+    <ion-slides pager="true" class="product-slider">
+      <ion-slide *ngFor="let img of loadedCity.image">
+        <img [src]="img"/>
+      </ion-slide>
+    </ion-slides>
+    <div class="ion-padding-vertical">
+      <h1 class="item-name">{{ loadedCity.name }} City</h1>
+      <h4 class="price">
+        {{ loadedCity.country }}
+      </h4>
+    </div>
+    <div class="overview">   
+      <div class="seperator"> <hr> </div>
+      <div class="description">
+        <h5>City's History</h5>
+        <p> {{ loadedCity.history }} </p>
+      </div>
+    </div>
+  </ion-content>
+</ion-app>

@@ -1,0 +1,26 @@
+<ion-header class="ion-padding">
+  <ion-toolbar>
+    <ion-avatar slot="start" routerLink="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-avatar>
+      <ion-icon name="sync-outline" slot="end" (click)="clear()"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+<ion-app>
+  <ion-content>
+    <h1>Ajouter pays</h1>
+    <div class="form">
+      <ion-item >
+        <ion-input placeholder="Pays" [(ngModel)]="pays.nom"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-input placeholder="Continent" [(ngModel)]="pays.localisation"></ion-input>
+      </ion-item>
+      <ion-item>
+        <label for="file" class="label-file">importer image</label>
+        <input id="file" class="input-file" type="file" (change)="onFileSelected($event)" accept=".jpg,.png,.jpeg">
+      </ion-item>
+      <ion-button expand="block" shape="round" (click)="ajouter_pays()" >Ajouter pays</ion-button>
+    </div>
+  </ion-content>
+</ion-app>
