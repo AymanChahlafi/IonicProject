@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
     path: 'city-details/:id',
     loadChildren: () => import('./city-details/city-details.module').then( m => m.CityDetailsPageModule)
   },
@@ -20,24 +24,8 @@ const routes: Routes = [
     loadChildren: () => import('./add-city/add-city.module').then( m => m.AddCityPageModule)
   },
   {
-    path: 'update-city',
-    loadChildren: () => import('./update-city/update-city.module').then( m => m.UpdateCityPageModule)
-  },
-  {
-    path: 'trips',
-    loadChildren: () => import('./trip/trip.module').then( m => m.TripPageModule)
-  },
-  {
-    path: 'list-reservation',
-    loadChildren: () => import('./list-reservation/list-reservation.module').then( m => m.ListReservationPageModule)
-  },
-  {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: 'reservation',
-    loadChildren: () => import('./reservation/reservation.module').then( m => m.ReservationPageModule)
   },
   {
     path: 'ajouter-pays',

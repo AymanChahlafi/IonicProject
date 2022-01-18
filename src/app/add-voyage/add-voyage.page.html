@@ -1,3 +1,10 @@
+<ion-header class="ion-padding">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 <ion-app>
   <ion-content>
     <h1>Ajouter Voyage</h1>
@@ -16,6 +23,9 @@
       </ion-item>
       <ion-item>
         <ion-input type="date" placeholder="Date de fin" [(ngModel)]="voyage.fin"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="lien de l'image" [(ngModel)]="voyage.image"></ion-input>
       </ion-item>
       <ion-button expand="block" shape="round" (click)="addVoyage()" >Ajouter Voyage</ion-button>
     </div>

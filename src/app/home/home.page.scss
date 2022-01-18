@@ -1,5 +1,5 @@
 ion-segment {
-  margin: 0 10px;
+  margin: 0 ;
 }
 
 ion-segment-button {
@@ -10,9 +10,13 @@ ion-segment-button {
 
   ion-label {
     position: relative;
-    left: -17px;
+    left: -7px;
     font-weight: bolder;
   }
+}
+
+ion-back-button{
+  color: #2DD36F;
 }
 
 .segment-button-checked {
@@ -61,12 +65,12 @@ h5 {
 
 
 .swiper-slide-prev {
-  opacity: .5;
+  // opacity: .5;
   transform: rotate(-8deg);
 }
 
 .swiper-slide-next {
-  opacity: .5;
+  opacity: .1;
   transform: rotate(8deg);
 }
 

@@ -1,36 +1,33 @@
-<ion-content>
-  <div>
-    <div>
-      <div class="shape"><img src="../../assets/top-right.png" /></div>
-  
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>
-            Register
-          </ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-item>
-            <ion-input placeholder="Fullname" [(ngModel)]="fullname"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input placeholder="Email" [(ngModel)]="email"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input type="password" placeholder="Confirme Password" [(ngModel)]="confirmePassword"></ion-input>
-          </ion-item> 
-          <ion-label *ngIf="dontMatch">Password don't match</ion-label>
-          <div class="bottom-section">
-            <ion-button (click)="register()" [disabled]="!fullname || !email || !password || !confirmePassword">Register</ion-button>
-            <span> Already have an account ? <a routerLink="../"> Login</a></span>
+<ion-content  color="light">
+    <ion-grid>
+      <ion-row color="light" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Créer votre compte!</h3>
           </div>
-        </ion-card-content>
-      </ion-card>
-    </div>
-  </div>
-  
-  </ion-content>
-  
+          <div padding>
+            <ion-item>
+              <ion-input  [(ngModel)]="fullname" type="text" placeholder="Name"  required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input [(ngModel)]="email" type="email" placeholder="your@email.com"  required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input [(ngModel)]="password" type="password" placeholder="Password"  required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input [(ngModel)]="confirmePassword" type="password" placeholder="Password again" required></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button  size="large" type="submit" expand="block" shape="round" (click)="register()">Register</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <div text-center>
+          Si vous-avez un compte, veuillez <a routerLink='/login' >S'authentifier</a> 
+        </div>
+    </ion-row>
+    </ion-grid>
+</ion-content>

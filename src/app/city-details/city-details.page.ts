@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController, ModalController } from '@ionic/angular';
 import { map } from 'rxjs/operators';
 import Ville, { DataService } from '../services/data.service';
-import { UpdateCityPage } from '../update-city/update-city.page';
 
 @Component({
   selector: 'app-city-details',
@@ -11,7 +10,7 @@ import { UpdateCityPage } from '../update-city/update-city.page';
   styleUrls: ['./city-details.page.scss'],
 })
 export class CityDetailsPage implements OnInit {
-  private ville: Ville;
+  private ville = new Ville;
 
   constructor(private router: Router,
     private data: DataService,
@@ -21,22 +20,22 @@ export class CityDetailsPage implements OnInit {
 
   ngOnInit() {
     let libelle = this.activedRoute.snapshot.paramMap.get('id');
+
     this.data.lister_Villes().snapshotChanges().pipe(
       map(changes =>
         changes.map(c =>
           ({ id: c.payload.key, ...c.payload.val() })
         )
       )
-    ).subscribe(data => {
+    ).subscribe((data) => {
       this.ville = data.filter(res => {
-        console.log(res);
-        return res.libelle == libelle;
-      })[0];
-      console.log(this.ville);
+        if(res.libelle === libelle){
+          return res;
+        } 
+      })[0]
     });
-    console.log(this.ville);
   }
-
+  
   deleteCity() {
     this.alert.create({header: 'Avertissement', message: 'voulez-vous vraiment supprimer cette ville?',
     buttons:[
@@ -56,5 +55,10 @@ export class CityDetailsPage implements OnInit {
     .then(alert => {
       alert.present();
     });
+  }
+
+  onClick(id) {
+    this.data.villeVoyages = id;
+    this.router.navigate(['reserve-voyage']);
   }
 }

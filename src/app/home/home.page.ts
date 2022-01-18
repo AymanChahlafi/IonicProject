@@ -69,12 +69,12 @@ export class HomePage {
     });
   }
 
-  villeDetail(name) {
-    console.log(name)
+  villeselectionner(name) {
     this.router.navigate([`city-details/${name}`]);
   }
 
   menu(id) {
+    this.data.villeVoyages ="";
     if(this.data.admin == true) {
       if(id == 0)
         this.router.navigate(['ajouter-pays']);
@@ -86,8 +86,8 @@ export class HomePage {
       if(id == 0)
         this.router.navigate(['home']);
       else if(id == 1)
-        this.router.navigate(['trips']);
-      else(id == 2)
+        this.router.navigate(['reserve-voyage']);
+      else if(id == 2)
         this.router.navigate(['list-reservation']);
     }
   }

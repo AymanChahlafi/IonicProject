@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/semi */
+/* eslint-disable @typescript-eslint/quotes */
+/* eslint-disable no-trailing-spaces */
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
@@ -38,7 +41,9 @@ export class RegisterPage implements OnInit {
       }).then(() => { 
         this.user.admin = this.email.split("@")[1] === 'admin.com' ? true :false;
         this.user.user = res.user.uid;
-        this.router.navigate(['./home'])}); 
-    });   
+        this.router.navigate(['/home'])}); 
+    });
+    console.log(res);
+    
   }
 }

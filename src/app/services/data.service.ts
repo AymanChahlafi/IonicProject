@@ -48,7 +48,8 @@ export class DataService {
   voyages: AngularFireList<Voyage> = null;
   users: AngularFireList<User> = null;
   reserves: AngularFireList<Reservation> = null;
-  user = "bXqADMMuXxUQKLVy6XT6ui02hmT2";
+  villeVoyages;
+  user;
   admin = false;
 
   constructor(private db: AngularFireDatabase) { 
@@ -58,8 +59,12 @@ export class DataService {
     this.reserves = db.list('/reserves');
   }
 
-  creer_voyage(voyage: Voyage) {
-    return this.voyages.push(voyage);
+  lister_voyages(): AngularFireList<Voyage> {
+    return this.voyages;
+  }
+
+  creer_voyage(v: Voyage): any {
+    return this.voyages.push(v);
   }
 
   lister_Villes(): AngularFireList<Ville> {
