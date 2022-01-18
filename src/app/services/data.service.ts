@@ -24,10 +24,10 @@ export class User {
 export class Voyage {
   debut: Date;
   fin: Date;
-  image: string;
   prix: number;
   vdepart: string;
   vFin: string;
+  image: "https://i.pinimg.com/236x/cb/67/1c/cb671c95dca1d2b8082f90935378f016.jpg";
   id: string;
 }
 
@@ -45,14 +45,21 @@ export class Reservation {
 export class DataService {
   villes: AngularFireList<Ville> = null;
   pays: AngularFireList<Pays> = null;
+  voyages: AngularFireList<Voyage> = null;
   users: AngularFireList<User> = null;
-  reservations: AngularFireList<Reservation> = null;
+  reserves: AngularFireList<Reservation> = null;
   user = "bXqADMMuXxUQKLVy6XT6ui02hmT2";
   admin = false;
 
   constructor(private db: AngularFireDatabase) { 
     this.villes = db.list('/villes');
     this.pays = db.list('/pays');
+    this.voyages = db.list('/voyages');
+    this.reserves = db.list('/reserves');
+  }
+
+  creer_voyage(voyage: Voyage) {
+    return this.voyages.push(voyage);
   }
 
   lister_Villes(): AngularFireList<Ville> {
@@ -92,22 +99,18 @@ export class DataService {
   }
 
   lister_Reservations(): AngularFireList<Reservation> {
-    return this.reservations;
+    return this.reserves;
   }
 
   creer_Reservation(reservation: Reservation): any {
-    this.db.object('/reservations/'+Math.random().toString(29).substring(3)).set({
+    this.db.object('/reserves/'+Math.random().toString(29).substring(3)).set({
       mobile: reservation.mobile,
       voyageId:reservation.voyageId,
       uid: reservation.uid
     });
   }
 
-  modifier_Reservation(id: string, value: any): Promise<void> {
-    return this.reservations.update(id, value);
-  }
-
   supprimer_Reservation(id: string): Promise<void> {
-    return this.reservations.remove(id);
+    return this.reserves.remove(id);
   } 
 }

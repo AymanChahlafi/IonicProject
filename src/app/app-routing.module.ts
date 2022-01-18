@@ -38,10 +38,21 @@ const routes: Routes = [
   {
     path: 'reservation',
     loadChildren: () => import('./reservation/reservation.module').then( m => m.ReservationPageModule)
-  },  {
+  },
+  {
     path: 'ajouter-pays',
     loadChildren: () => import('./ajouter-pays/ajouter-pays.module').then( m => m.AjouterPaysPageModule)
   },
+  {
+    path: 'add-voyage',
+    loadChildren: () => import('./add-voyage/add-voyage.module').then( m => m.AddVoyagePageModule)
+  },
+  {
+    path: 'reserve-voyage',
+    loadChildren: () => import('./reserve-voyage/reserve-voyage.module').then( m => m.ReserveVoyagePageModule)
+  },
+
+
 
 ];
 

@@ -59,14 +59,14 @@ export class ListReservationPage implements OnInit {
     
   }
 
-  async modifier_Reservation() {
+/*   async modifier_Reservation() {
     this.data.modifier_Reservation(this.reservation.id, this.reservation);
     const updateToast = await this.toast.create({
       message: 'City Updated',
       duration: 1000
     });
     updateToast.present();
-  }
+  } */
 
   async supprimer_Reservation(id) {
     await this.data.supprimer_Reservation(id);

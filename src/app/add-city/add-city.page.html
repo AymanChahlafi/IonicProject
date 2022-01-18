@@ -3,8 +3,7 @@
     <ion-avatar slot="start" routerLink="home">
       <ion-icon name="home"></ion-icon>
     </ion-avatar>
-      <ion-icon name="sync-outline" slot="end" (click)="clear()"></ion-icon>
-    </ion-toolbar>
+  </ion-toolbar>
 </ion-header>
 <ion-app>
   <ion-content>
@@ -17,7 +16,7 @@
         <ion-input placeholder="Pays" [(ngModel)]="ville.pays"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-textarea placeholder="Description" rows="2" [(ngModel)]="ville.desc"></ion-textarea>
+        <ion-input placeholder="Description" rows="2" [(ngModel)]="ville.desc"></ion-input>
       </ion-item>
       <ion-item>
         <label for="file" class="label-file">importer image</label>

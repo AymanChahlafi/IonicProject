@@ -18,7 +18,7 @@ export class HomePage {
     if(data.admin == true) {
       this.tab[0] = 'Pays';
       this.tab[1] = 'Ville';
-      this.tab[2] = 'Reservation';
+      this.tab[2] = 'Voyage';
     }else {
       this.tab[0] = 'Home';
       this.tab[1] = 'Reservation';
@@ -70,6 +70,7 @@ export class HomePage {
   }
 
   villeDetail(name) {
+    console.log(name)
     this.router.navigate([`city-details/${name}`]);
   }
 
@@ -80,7 +81,7 @@ export class HomePage {
       else if(id == 1)
         this.router.navigate(['add-city']);
       else if(id == 2)
-        this.router.navigate(['reservation']);
+        this.router.navigate(['add-voyage']);
     }else {
       if(id == 0)
         this.router.navigate(['home']);

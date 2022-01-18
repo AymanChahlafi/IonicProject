@@ -1,0 +1,23 @@
+<ion-app>
+  <ion-content>
+    <h1>Ajouter Voyage</h1>
+    <div class="form">
+      <ion-item >
+        <ion-input placeholder="Ville de départ" [(ngModel)]="voyage.vdepart"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-input placeholder="Ville d'arrivée" [(ngModel)]="voyage.vFin"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="prix" [(ngModel)]="voyage.prix"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-input type="date" placeholder="Date de départ" [(ngModel)]="voyage.debut"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="date" placeholder="Date de fin" [(ngModel)]="voyage.fin"></ion-input>
+      </ion-item>
+      <ion-button expand="block" shape="round" (click)="addVoyage()" >Ajouter Voyage</ion-button>
+    </div>
+  </ion-content>
+</ion-app>

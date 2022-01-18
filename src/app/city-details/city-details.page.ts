@@ -16,9 +16,8 @@ export class CityDetailsPage implements OnInit {
   constructor(private router: Router,
     private data: DataService,
     private activedRoute: ActivatedRoute,
-    private alert: AlertController,
-    private updateModel: ModalController 
-  ) {}
+    private alert: AlertController
+    ) {}
 
   ngOnInit() {
     let libelle = this.activedRoute.snapshot.paramMap.get('id');
@@ -30,19 +29,12 @@ export class CityDetailsPage implements OnInit {
       )
     ).subscribe(data => {
       this.ville = data.filter(res => {
+        console.log(res);
         return res.libelle == libelle;
       })[0];
+      console.log(this.ville);
     });
-  }
-
-  async updatedCity () {
-    const modal = await this.updateModel.create({
-      component: UpdateCityPage,
-      componentProps: {city: this.ville},
-      breakpoints: [0, 0.5, 0.75],
-      initialBreakpoint: 0.5
-    });
-    modal.present();
+    console.log(this.ville);
   }
 
   deleteCity() {
