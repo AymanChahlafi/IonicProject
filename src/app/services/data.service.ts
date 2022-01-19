@@ -75,10 +75,6 @@ export class DataService {
     return this.villes.push(ville);
   }
 
-  modifier_Ville(id: string, value: any): Promise<void> {
-    return this.villes.update(id, value);
-  }
-
   supprimer_Ville(id: string): Promise<void> {
     return this.villes.remove(id);
   }  

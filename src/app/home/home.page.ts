@@ -88,7 +88,7 @@ export class HomePage {
       else if(id == 1)
         this.router.navigate(['reserve-voyage']);
       else if(id == 2)
-        this.router.navigate(['list-reservation']);
+        this.router.navigate(['historique']);
     }
   }
 

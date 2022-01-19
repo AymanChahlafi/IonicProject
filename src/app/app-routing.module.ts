@@ -4,7 +4,7 @@ import { ChildrenOutletContexts, PreloadAllModules, RouterModule, Routes } from 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -39,9 +39,10 @@ const routes: Routes = [
     path: 'reserve-voyage',
     loadChildren: () => import('./reserve-voyage/reserve-voyage.module').then( m => m.ReserveVoyagePageModule)
   },
-
-
-
+  {
+    path: 'historique',
+    loadChildren: () => import('./historique/historique.module').then( m => m.HistoriquePageModule)
+  },
 ];
 
 @NgModule({

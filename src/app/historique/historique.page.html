@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/" color="success"></ion-back-button>
     </ion-buttons>
-    <ion-title>Voyages</ion-title>
+    <ion-title>Historique voyages</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -25,7 +25,6 @@
               </ion-label>
             </ion-item>
           </ion-card-header>
-
           <ion-card-content>
             <ion-list lines="none">
               <ion-item>
@@ -41,9 +40,9 @@
               </ion-item>
             </ion-list>
           </ion-card-content>
-          <ion-item (click)="alert(voyage.id)">
+          <ion-item (click)="supprimer(voyage.id)">
             <ion-label>
-              <h2><b>Reservé maintenant</b></h2>
+              <h2><b>Supprimer</b></h2>
             </ion-label>
           </ion-item>
         </ion-card>
