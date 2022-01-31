@@ -25,7 +25,9 @@
 
 ## Screenshot
 
-### Page
+### Ajouter Ville
+
+<img src="src/assets/screenshots/add_city.jpg">
 
 ## User Stories - Admin Part
 
