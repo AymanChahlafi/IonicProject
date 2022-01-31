@@ -27,7 +27,7 @@
 
 ### Ajouter Ville
 
-<img src="src/assets/screenshots/add_city.jpg">
+<img src="src/assets/screenshots/add_city.jpg" width="200">
 
 ## User Stories - Admin Part
 
