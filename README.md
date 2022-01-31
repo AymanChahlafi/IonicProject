@@ -25,9 +25,33 @@
 
 ## Screenshot
 
-### Ajouter Ville
+### S'enregistrer
 
-<img src="src/assets/screenshots/add_city.jpg" width="200">
+<img src="src/assets/screenshots/register.jpg" width="250">
+
+### S'authentifier
+
+<img src="src/assets/screenshots/login.jpg" width="250">
+
+### Page d'acceuil
+
+<img src="src/assets/screenshots/client_home.jpg" width="250">
+
+### Detail Ville
+
+<img src="src/assets/screenshots/detail_city.jpg" width="250">
+
+### Listes des Trips
+
+<img src="src/assets/screenshots/Trips.jpg" width="250">
+
+### Reserver trip - entrer numéro de téléphone
+
+<img src="src/assets/screenshots/resrve_phoneNumber.jpg" width="250">
+
+### historique des Trips
+
+<img src="src/assets/screenshots/historique_trip.jpg" width="250">
 
 ## User Stories - Admin Part
 
@@ -48,3 +72,31 @@
 ## Screenshot
 
 ### Page
+
+### S'enregistrer
+
+<img src="src/assets/screenshots/register.jpg" width="250">
+
+### S'authentifier
+
+<img src="src/assets/screenshots/login.jpg" width="250">
+
+### Admin
+
+<img src="src/assets/screenshots/admin_home.jpg" width="250">
+
+### Ajouter Trip
+
+<img src="src/assets/screenshots/add_trip.jpg" width="250">
+
+### Ajouter Trip - choisir la date
+
+<img src="src/assets/screenshots/addtrip_calendar.jpg" width="250">
+
+### Ajouter Ville
+
+<img src="src/assets/screenshots/add_city.jpg" width="250">
+
+### Detail Ville
+
+<img src="src/assets/screenshots/detail_city.jpg" width="250">
