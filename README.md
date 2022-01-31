@@ -47,7 +47,7 @@
 
 ### Reserver trip - entrer numéro de téléphone
 
-<img src="src/assets/screenshots/resrve_phoneNumber.jpg" width="250">
+<img src="src/assets/screenshots/reserve_phoneNumber.jpg" width="250">
 
 ### historique des Trips
 
@@ -91,7 +91,7 @@
 
 ### Ajouter Trip - choisir la date
 
-<img src="src/assets/screenshots/addtrip_calendar.jpg" width="250">
+<img src="src/assets/screenshots/addTrip_calendar.jpg" width="250">
 
 ### Ajouter Ville
 
