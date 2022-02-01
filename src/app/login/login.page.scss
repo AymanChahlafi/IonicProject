@@ -1,20 +1,21 @@
-ion-item{
-    --margin-top:15px;
-    --background: transparent;
-    --color: #2DD36F;
+ion-item {
+  --margin-top: 15px;
+  --background: transparent;
+  --color: #2dd36f;
 }
-ion-button{
-    --margin-top:30px;
-    --background: #2DD36F;
+ion-button {
+  margin-top: 30px;
+  --background: #2dd36f;
 }
-a{
-    color: #2DD36F;
+a {
+  color: #2dd36f;
 }
 
-h3{
-    margin-top:100px;
-    margin-bottom:50px;
-    margin-left:85px;
-    color: #2DD36F;
-    font-size: 32px;
+h3 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  //   margin-left:85px;
+  text-align: center;
+  color: #2dd36f;
+  font-size: 32px;
 }

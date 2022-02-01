@@ -39,11 +39,11 @@ ion-toolbar ion-menu-button {
   transition: opacity 500ms ease-in-out;
 }
 
-
 .about-info {
   position: absolute;
   margin-top: -20px;
   border-radius: 30px;
+  width: 100%;
   background: var(--ion-background-color, #fff);
 }
 
@@ -71,7 +71,7 @@ ion-toolbar ion-menu-button {
   --max-width: 90%;
   --width: 336px;
 }
-ion-item{
+ion-item {
   ion-button {
     margin-top: 20px;
     margin-left: 30px;
