@@ -1,20 +1,32 @@
-# Ionic Voyages
+# IonicProject
 
-## Main technology used
+## Sujet
 
-1. Ionic
-2. Angular
-3. Firebase
+On souhaite promouvoir le tourisme national et présenter les villes marocaines touristiques dans un
 
-## User Stories - User Part
+cadre accueillant et accessible en donnant une idée de chaque ville. Ensuite, des voyages ou excur-
+sions sont proposées pour les clients potentiels pour faire une réservation en choisissant la destination
+
+et la formule adéquate.
+
+
+## Pré-requis 
+
+1. [Ionic](https://ionicframework.com/getting-started/)
+2. [Angular](https://angular.io/guide/setup-local)
+3. [FireBase](https://console.firebase.google.com/u/0/)
+
+
+## User Stories - Partie Client
 
 - User peut creer un compte
 - User peut se connecter a son compte
 - User peut choisir le voyage souhaité
 - User peut voir l'historique de ses reservations
-- User can delete a reservation
+- User peut supprimer une reservation
 
-## Features
+
+## Tâches
 
 - Forme d'enregistrement
 - Forme pour creer un compte
@@ -23,7 +35,8 @@
 - Effectuer une reservation
 - Effacer une reservation
 
-## Screenshot
+
+## Captures d'écran
 
 ### S'enregistrer
 
@@ -61,7 +74,8 @@
 - Admin peut ajouter une ville d'un pays
 - Admin peut ajouter une ville d'un voyage
 
-## Features
+
+## Tâches
 
 - Forme d'enregistrement
 - Forme de connexion
@@ -69,9 +83,8 @@
 - Filtrage par pays
 - Effacer une ville
 
-## Screenshot
 
-### Page
+## Captures d'écran
 
 ### S'enregistrer
 
